@@ -1,26 +1,26 @@
 services:
   # Backend service
   - type: web
-    name: e-comers-api
-    runtime: node
-    rootDir: api
-    buildCommand: npm install
-    startCommand: npm start
+    name: "e-comers-api"
+    runtime: "node"
+    rootDir: "api"
+    buildCommand: "npm install"
+    startCommand: "npm start"
     envVars:
-      - key: MONGODB_URI
-        value: mongodb+srv://arockiadassvinith_db_user:<db_password>@cluster0.cu0xi4b.mongodb.net/?appName=Cluster0
-      - key: JWT_SECRET
-        value: LuxeMarket_Secure_JWT_Secret_2026_!@#$
-      - key: NODE_ENV
-        value: production
+      - key: "MONGODB_URI"
+        value: "mongodb+srv://arockiadassvinith_db_user:<db_password>@cluster0.cu0xi4b.mongodb.net/?appName=Cluster0"
+      - key: "JWT_SECRET"
+        value: "LuxeMarket_Secure_JWT_Secret_2026_!@#$"
+      - key: "NODE_ENV"
+        value: "production"
 
   # Frontend service
   - type: web
-    name: e-comers-frontend
-    runtime: static
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    name: "e-comers-frontend"
+    runtime: "static"
+    rootDir: "frontend"
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "dist"
     envVars:
-      - key: VITE_API_URL
-        value: https://e-comers-api.onrender.com/api # Replace with your actual backend URL after first deploy
+      - key: "VITE_API_URL"
+        value: "https://e-comers-api.onrender.com/api"
