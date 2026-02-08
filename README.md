@@ -1,4 +1,4 @@
-# 🛍️ LuxeMarket: Premium E-Commerce Suite
+# 🛍️ e-comers: Premium E-Commerce Suite
 
 A high-performance, full-stack shopping application featuring a modern **Node.js/Express** backend and a dynamic **React** (Vite) frontend.
 

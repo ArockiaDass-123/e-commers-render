@@ -1,7 +1,7 @@
 services:
   # Backend service
   - type: web
-    name: luxemarket-api
+    name: e-comers-api
     runtime: node
     buildCommand: npm install
     startCommand: npm start
@@ -15,10 +15,10 @@ services:
 
   # Frontend service
   - type: web
-    name: luxemarket-frontend
+    name: e-comers-frontend
     runtime: static
     buildCommand: cd frontend && npm install && npm run build
     publishPath: frontend/dist
     envVars:
       - key: VITE_API_URL
-        value: https://luxemarket-api.onrender.com/api # Replace with your actual backend URL after first deploy
+        value: https://e-comers-api.onrender.com/api # Replace with your actual backend URL after first deploy
