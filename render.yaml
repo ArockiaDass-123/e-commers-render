@@ -1,5 +1,5 @@
 services:
-  # Backend service
+  # Backend: Web Service
   - type: web
     name: "e-comers-api"
     runtime: "node"
@@ -14,10 +14,9 @@ services:
       - key: "NODE_ENV"
         value: "production"
 
-  # Frontend service
-  - type: web
+  # Frontend: Static Site
+  - type: static
     name: "e-comers-frontend"
-    runtime: "static"
     rootDir: "frontend"
     buildCommand: "npm install && npm run build"
     staticPublishPath: "dist"
