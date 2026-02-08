@@ -3,7 +3,7 @@ services:
   - type: web
     name: e-comers-api
     runtime: node
-    rootDirectory: api
+    rootDir: api
     buildCommand: npm install
     startCommand: npm start
     envVars:
@@ -18,7 +18,7 @@ services:
   - type: web
     name: e-comers-frontend
     runtime: static
-    rootDirectory: frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
