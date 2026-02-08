@@ -1,0 +1,10 @@
+node_modules/
+.env
+dist/
+build/
+.DS_Store
+*.log
+shopping_cart.db
+frontend/node_modules/
+api/node_modules/
+backend/node_modules/
