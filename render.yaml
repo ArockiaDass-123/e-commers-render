@@ -3,6 +3,7 @@ services:
   - type: web
     name: e-comers-api
     runtime: node
+    rootDirectory: api
     buildCommand: npm install
     startCommand: npm start
     envVars:
@@ -17,8 +18,9 @@ services:
   - type: web
     name: e-comers-frontend
     runtime: static
-    buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: frontend/dist
+    rootDirectory: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
         value: https://e-comers-api.onrender.com/api # Replace with your actual backend URL after first deploy
